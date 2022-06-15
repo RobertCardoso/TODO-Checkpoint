@@ -8,13 +8,24 @@
 </head>
 <body>
     <div>
-        <h2>API Docmentation</h2>
+        <h2>API Documentation</h2>
 
         <h3>GET /todos</h3>
         <span> This route will return an array for each todo item in our app. But only the id, is_done, task are included</span>
 
+        <h3>GET /todos/:id</h3>
+        <span> this route will return a single todo by the todo ID</span>
+        
         <h3>POST /todos</h3>
         <span>this route can be used to create a todo item. The body of the request should include the task description</span>
+
+        <h3>DELETE /todos</h3>
+        <span>this route can delete a todo by the todo's ID</span>
+
+        <h3>UPDATE /todos</h3>
+        <span>this route update or change a todo by the todo ID, but we cant change the id</span>
+
+
     </div>
 </body>
 </html>
