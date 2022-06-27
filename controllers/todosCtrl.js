@@ -41,7 +41,7 @@ let itemDetails = function(req, res){
     // BAD WAYYY, susptible to sql injection, please do not do this
     // let badSql = "select id, task, description, is_done from todos where id = "+id;
 
-    db.query(sql, params, function(){
+    db.query(sql, params, function(err, results){
         if(err){
             console.log("failed to execute query", err)
             res.sendStatus(500) // it is not the clients fault the query failed
