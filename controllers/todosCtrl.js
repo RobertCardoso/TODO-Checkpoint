@@ -145,7 +145,7 @@ let updateItem = function(req, res){
         isDoneint = 0
     }
 
-    let sql = "delete from todos where id = ? "
+    let sql = "update todos set task = ?, description = ?, is_done = ? where id = ?"
     let params = [task, description, isDoneint, id];
 
     db.query(sql, params, function(err, results){
